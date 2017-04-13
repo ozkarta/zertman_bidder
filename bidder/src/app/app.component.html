@@ -1,0 +1,41 @@
+<div class="container">  
+
+
+	<div>
+		<h1><span>{{slotName}}</span></h1>
+		<h1><span>{{slotDescription}}</span></h1>
+	</div>
+
+	<hr>
+
+	<div>
+			<h1>lAST bIDDER is </h1>
+
+		<h3><span>{{bidderName}}</span></h3>
+		<h3><span>{{bidAmmount}}</span></h3>
+	</div>
+
+
+
+<hr>
+
+<h1>place a bid</h1>
+ 	<form (ngSubmit)="bid()" #bidForm="ngForm">
+
+
+	    <div class="form-group">
+	      
+
+	     <label>Who Are you</label>
+	      <input type="text" name="newBidder"  [(ngModel)]="newBidder" >
+
+	      <label for="usr">Enter Price more than  {{bidAmmount}} :</label>
+	      <input type="number" class="form-control" id="usr" [(ngModel)]="newBid" name="bidAmmount">     
+
+      	</div> 
+
+      	<button type="submit" class="btn btn-success">bid</button>
+    </form>
+    
+
+	</div>
